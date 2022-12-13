@@ -5,26 +5,23 @@
     padding: 0;
 }
 .layout{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center; */
-}
-.container{
-    margin: 0 122px;
-    padding: 0 15px;
-    width: 1216px;
-    border: solid ;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    justify-content: flex-start;
     align-items: center;
+}
+.container{
+    margin: 0;
+    margin-left: 0px;
+    padding: 0 15px;
+    width: 1216px;
 }
 .navContainer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 122px;
+    padding: 0 15px;
 }
 .navlinks > ul {
     display: flex;
@@ -55,15 +52,21 @@
 }
 
 .hero{
+    width: 100%;
     background: url('https://wpocean.com/html/tf/ummah-live/ummah/assets/images/slider/bg.png') no-repeat;
-    background-size: 100% 910px;
+    background-size: auto 910px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
 }
 .subBackground{
     position: absolute;
     background: url('https://wpocean.com/html/tf/ummah-live/ummah/assets/images/slider/bg2.png');
     width: 468px;
     height: 336px;
-    top: 380px;
+    top: 360px;
     left: 210px;
 
 }
@@ -89,7 +92,8 @@
 }
 h2{
     color: #062265;
-    font-size: 50px;
+    font-size: 40px;
+    font-weight: 500;
     margin: 0px 0px 22.5px;
     font-family: 'Poppins', sans-serif;
 }
@@ -97,4 +101,65 @@ h2{
     color: #666666;
     margin: 0px 0px 20px;
     font-family: 'Poppins', sans-serif;
+    line-height: 30px;
 }
+.bounce {
+    position: absolute;
+    right: 150px;
+    top: 300px;
+    animation: bounce 3s linear infinite;
+  }
+  @keyframes bounce {
+      0% { transform:translateY(0) translateX(0); }
+      50%{transform: translateY(15px) translateX(7px);}
+      100% { transform:translateY(0) translateX(0); }
+    }
+  .aboutUs{
+    margin-top: 190px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+  .aboutContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+  .aboutSubHeading{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color:  #00ded8;
+  }
+  .mosqueDevelopment{
+    margin-top: 200px;
+    background: url('https://wpocean.com/html/tf/ummah-live/ummah/assets/images/service/bg.png');
+    height: 600px;
+    width: 100%;
+    background-size: auto 910px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .development{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    z-index: 999;
+  }
+  .developmentImg{
+    position: absolute;
+    z-index: -909;
+    margin-right: 600px;
+  }
+  .simpleButton{
+    padding: 13px 30px;
+    font-size: 16px;
+    color: black;
+    border-radius: 55px;
+    border: 0;
+    width: fit-content;
+    background: white;
+  }
