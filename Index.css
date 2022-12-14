@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* overflow: hidden; */
 }
 .layout{
     display: flex;
@@ -11,17 +12,18 @@
     align-items: center;
 }
 .container{
+    border: 1px solid cyan;
     margin: 0;
     margin-left: 0px;
-    padding: 0 15px;
-    width: 1216px;
+    padding: 0;
+    padding-left: 15%;
+    /* max-width: 1216px !important; */
 }
 .navContainer{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 122px;
-    padding: 0 15px;
 }
 .navlinks > ul {
     display: flex;
@@ -35,7 +37,12 @@
     color: #666666;
     padding: 40px 15px;
 }
-
+.buttonGroup{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding-right: 20px;
+}
 .button{
     padding: 13px 30px;
     font-size: 16px;
@@ -50,14 +57,34 @@
     background: -webkit-gradient(linear, left top,right top, from( #00A7D5), to(#00DED8));
     cursor: pointer;
 }
+.mobileMenuBar{
+    padding: 8px;
+    width: 40px;
+    height: 32px;
+    background: -webkit-gradient(linear, left top, right top, from(#00DED8), to(#00A7D5));;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    margin-left: 30px;
+    display: none;
+
+}
+.menubar{
+    width: 100%;
+    border: 1px solid white;
+    margin-bottom: 3px;
+    margin-top: 1px;
+}
 
 .hero{
     width: 100%;
     background: url('https://wpocean.com/html/tf/ummah-live/ummah/assets/images/slider/bg.png') no-repeat;
-    background-size: auto 910px;
+    background-size: 100%;
     background-size: cover;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
 
 }
@@ -67,7 +94,7 @@
     width: 468px;
     height: 336px;
     top: 360px;
-    left: 210px;
+    left: 0;
 
 }
 .content{
@@ -77,7 +104,6 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    padding-left: 20px;
     z-index: 1000;
 }
 .subheading{
@@ -114,7 +140,9 @@ h2{
       50%{transform: translateY(15px) translateX(7px);}
       100% { transform:translateY(0) translateX(0); }
     }
+    
   .aboutUs{
+    width: 100%;
     margin-top: 190px;
     display: flex;
     justify-content: space-between;
@@ -132,6 +160,40 @@ h2{
     margin-bottom: 10px;
     color:  #00ded8;
   }
+  @media all and (max-width:1400px){
+    .container{
+        padding: 0;
+        padding-left: 6%;
+    }
+    .bounce{
+        right: 0;
+    }
+}
+
+@media all and (max-width:1000px){
+    .container{
+        padding-left: 12%;
+    }
+    .mobileMenuBar{
+        display: block;
+    }
+    .navlinks{
+        display: none;
+    }
+    .navContainer{
+        width: 100%;
+        padding: 20px;
+    }
+    .bounce{
+        display: none;
+    }
+    .aboutUs{
+        max-width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center;
+    }
+}
   .mosqueDevelopment{
     margin-top: 200px;
     background: url('https://wpocean.com/html/tf/ummah-live/ummah/assets/images/service/bg.png');
@@ -163,3 +225,144 @@ h2{
     width: fit-content;
     background: white;
   }
+.cardsContent{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.cards{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+}
+.card{
+   height: 280px;
+   flex-basis: 23%;
+   margin-right: 23px;
+   margin-bottom: 30px;
+   perspective: 1000px;
+   opacity: 0.8;
+}
+.innerCard{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.card:hover .innerCard{
+    transform: rotateY(180deg);
+}
+.innerIcon, .cardBack{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.cardBack{
+    background: -webkit-gradient(linear, left top, right top, from(#00DED8), to(#00A7D5));
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card1{
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url('https://alhambra.axiomthemes.com/wp-content/uploads/2017/06/post-15.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+.card2{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url('https://alhambra.axiomthemes.com/wp-content/uploads/2017/06/post-5.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+   .card3{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url('https://alhambra.axiomthemes.com/wp-content/uploads/2017/06/post-16.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  }
+
+  .card4{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://alhambra.axiomthemes.com/wp-content/uploads/2017/06/post-3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  } 
+  
+   .card5{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url('https://alhambra.axiomthemes.com/wp-content/uploads/2017/06/post-17.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .card6{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://alhambra.axiomthemes.com/wp-content/uploads/2017/06/post-14.jpg');
+    background-size: cover;
+    background-size: 100%;
+
+  }
+  .card7{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://alhambra.axiomthemes.com/wp-content/uploads/2017/06/post-11.jpg');
+    background-size: cover;
+    background-size: 100%;
+
+  }
+
+  .card8{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://alhambra.axiomthemes.com/wp-content/uploads/2017/06/post-12.jpg');
+    background-size: cover;
+    background-size: 100%;
+
+  }
+
+  .icon{
+    font-size: 40px;  
+    color:white;
+    padding-bottom: 20px;
+  }
+  .innerIcon{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cardheading{
+    color: white;
+    font-size: 20px;
+    margin-top: 3px;
+  }
+
+  .stayInTouch{
+    padding: 5% 10%;
+  }
+  .stayContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .stayIcons{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+  .innerStayContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+}
