@@ -12,11 +12,11 @@
     align-items: center;
 }
 .container{
-    border: 1px solid cyan;
     margin: 0;
     margin-left: 0px;
     padding: 0;
     padding-left: 15%;
+    padding-right: 5%;
     /* max-width: 1216px !important; */
 }
 .navContainer{
@@ -160,62 +160,27 @@ h2{
     margin-bottom: 10px;
     color:  #00ded8;
   }
-  @media all and (max-width:1400px){
-    .container{
-        padding: 0;
-        padding-left: 6%;
-    }
-    .bounce{
-        right: 0;
-    }
-}
-
-@media all and (max-width:1000px){
-    .container{
-        padding-left: 12%;
-    }
-    .mobileMenuBar{
-        display: block;
-    }
-    .navlinks{
-        display: none;
-    }
-    .navContainer{
-        width: 100%;
-        padding: 20px;
-    }
-    .bounce{
-        display: none;
-    }
-    .aboutUs{
-        max-width: 100%;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-content: center;
-    }
-}
+ 
   .mosqueDevelopment{
     margin-top: 200px;
     background: url('https://wpocean.com/html/tf/ummah-live/ummah/assets/images/service/bg.png');
-    height: 600px;
+    height: fit-content;
     width: 100%;
     background-size: auto 910px;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-content: center;
+    padding: 0 5%;
   }
   .development{
+    width: 100%;
     position: relative;
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: space-between;
     z-index: 999;
   }
-  .developmentImg{
-    position: absolute;
-    z-index: -909;
-    margin-right: 600px;
-  }
+
   .simpleButton{
     padding: 13px 30px;
     font-size: 16px;
@@ -225,7 +190,9 @@ h2{
     width: fit-content;
     background: white;
   }
+  
 .cardsContent{
+    width: 100%;
     margin-top: 40px;
     display: flex;
     flex-direction: column;
@@ -239,14 +206,16 @@ h2{
     flex-wrap: wrap;
     width: 100%;
     margin: 0;
+    padding-left: 8%;
 }
 .card{
    height: 280px;
-   flex-basis: 23%;
-   margin-right: 23px;
+   flex-basis: 22%;
+   margin-right: 20px;
    margin-bottom: 30px;
    perspective: 1000px;
    opacity: 0.8;
+   width: auto !important;
 }
 .innerCard{
     position: relative;
@@ -346,6 +315,7 @@ h2{
   }
 
   .stayInTouch{
+    width: 100%;
     padding: 5% 10%;
   }
   .stayContent{
@@ -365,4 +335,69 @@ h2{
     justify-content: flex-start;
     align-content: center;
     align-items: center;
+}
+
+@media all and (max-width:1400px){
+    .container{
+        padding: 0;
+        padding-left: 6%;
+    }
+    .bounce{
+        right: 0;
+    }
+    .devImg{
+        margin-top: 90px;
+        width: 400px;
+        height: 400px;
+    }
+    .stayInTouch{
+        padding: 5% 20%;
+    }
+}
+
+@media all and (max-width:1000px){
+    .container{
+        padding-left: 12%;
+    }
+    .mobileMenuBar{
+        display: block;
+    }
+    .navlinks{
+        display: none;
+    }
+    .navContainer{
+        width: 100%;
+        padding: 20px;
+    }
+    .bounce{
+        display: none;
+    }
+    .aboutUs{
+        max-width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center;
+    }
+    .development{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center;
+    }
+    .simpleButton, .aboutSubHeading{
+        margin-top: 20px;
+    }
+    .stayInTouch{
+        padding: 5% 18%;
+    }
+}
+@media all and (max-width:768px){
+    .card{
+        flex-basis: 45%;
+    }
+    .stayIcons{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+    }
 }
