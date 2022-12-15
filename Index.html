@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
     <title>Template</title>
 </head>
 <body>
@@ -90,7 +96,7 @@
                 </div>
                 <div class="cardBack">
                     <h3>Devotion</h3>
-                    <p class="description">
+                    <p class="text">
                         The spirit of mutual aid, unity and cohesion is the basis
                         of our collective.
                     </p>
@@ -105,7 +111,7 @@
                 </div>
                 <div class="cardBack">
                     <h3>Balance</h3>
-                    <p class="description">
+                    <p class="text">
                         The spirit of mutual aid, unity and cohesion is the basis
                         of our collective.
                     </p>
@@ -120,7 +126,7 @@
                 </div>
                 <div class="cardBack">
                     <h3>Purposefulness</h3>
-                    <p class="description">
+                    <p class="text">
                         The spirit of mutual aid, unity and cohesion is the basis
                         of our collective.
                     </p>
@@ -135,7 +141,7 @@
                 </div>
                 <div class="cardBack">
                     <h3>Mutual Support</h3>
-                    <p class="description">
+                    <p class="text">
                         The spirit of mutual aid, unity and cohesion is the basis
                         of our collective.
                     </p>
@@ -150,7 +156,7 @@
                 </div>
                 <div class="cardBack">
                     <h3>Surrender</h3>
-                    <p class="description">
+                    <p class="text">
                         The spirit of mutual aid, unity and cohesion is the basis
                         of our collective.
                     </p>
@@ -165,7 +171,7 @@
                 </div>
                 <div class="cardBack">
                     <h3>Professionalism</h3>
-                    <p class="description">
+                    <p class="text">
                         The spirit of mutual aid, unity and cohesion is the basis
                         of our collective.
                     </p>
@@ -180,7 +186,7 @@
                 </div>
                 <div class="cardBack">
                     <h3>Creativity</h3>
-                    <p class="description">
+                    <p class="text">
                         The spirit of mutual aid, unity and cohesion is the basis
                         of our collective.
                     </p>
@@ -195,7 +201,7 @@
                 </div>
                 <div class="cardBack">
                     <h3>Simplicity</h3>
-                    <p class="description">
+                    <p class="text">
                         The spirit of mutual aid, unity and cohesion is the basis
                         of our collective.
                     </p>
@@ -211,22 +217,32 @@
             </div>
             <div class="stayIcons">
                 <div class="innerStayContent">
-                    <p><i class="fa-solid fa-map-location-dot" style="font-size: 40px; margin-bottom: 13px;"></i></p>
+                    <p><i class="fa-solid fa-map-location-dot description" style="font-size: 40px; margin-bottom: 13px;"></i></p>
                     <h3>0(800) 420-78-78</h3>
                     <p class="description">9.00 am - 6.00 pm</p>
                 </div>
                 <div class="innerStayContent">
-                    <p><i class="fa-solid fa-mobile-screen-button" style="font-size: 40px; margin-bottom: 13px;"></i></p>
+                    <p><i class="fa-solid fa-mobile-screen-button description" style="font-size: 40px; margin-bottom: 13px;"></i></p>
                     <h3>0(800) 420-78-78</h3>
                     <p class="description">9.00 am - 6.00 pm</p>
                 </div>
                 <div class="innerStayContent">
-                    <p><i class="fa-solid fa-envelope" style="font-size: 40px; margin-bottom: 13px;"></i></p>
+                    <p><i class="fa-solid fa-envelope description" style="font-size: 40px; margin-bottom: 13px;"></i></p>
                     <h3>0(800) 420-78-78</h4>
                     <p class="description">9.00 am - 6.00 pm</p>
                 </div>
             </div>
+        </section>
+        <section class="map" id="map">
+
         </section> 
     </div>
+    <script>
+        var map = L.map('map').setView([31.5204, 74.3587], 13);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+    </script>
 </body>
 </html>
